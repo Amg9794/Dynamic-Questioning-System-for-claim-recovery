@@ -216,7 +216,7 @@ Explicit integer priority rules were chosen over ML ranking because every questi
 
 **Why this approach:**
 
-Hardcoded questions were chosen over API generation for **determinism** — the same bank every run, stable test cases, and no hallucinated enum values.
+Hardcoded questions were chosen over API generation for **determinism** — the same bank every run, stable test cases, and no hallucinated values.
 
 The `fill_fields` in each question were assigned deliberately because they drive the **gap score calculation** in the retriever. The question for `third_party_involved` fills a field that 200+ other questions require as a prerequisite — giving it a gap score of 200 and placing it first in every session. This was intentional design, not coincidence.
 
@@ -241,7 +241,37 @@ question_bank_validated.jsonl  (Task 3 input)
 validation_report.json
 ```
 
-**4-stage pipeline:**
+**stage pipeline:**
+
+###  Questions Flagged (Text Rule)
+
+**What was flagged:**
+Four questions used a dual-sentence format where the question mark
+appeared mid-sentence rather than at the end:
+
+- "When exactly did the incident occur? Please provide date and time."
+- "Where did the incident occur? Please share the city and location."
+- "Which parts of your vehicle were visibly damaged? (Select all that apply...)"
+- "Was the front bumper damaged? If so, describe the extent."
+
+**Initial rule:** Text must end with `?`
+
+**Decision: Fix the validator rule, not the questions.**
+
+These are natural and valid question formats for a claim intake interview.
+The format "Was X? If so, describe." is standard in insurance documentation.
+The rule was relaxed to require only that a `?` appears anywhere in the text.
+```python
+# Before — too strict
+elif not text.strip().endswith("?"):
+    error("Text does not end with '?'")
+
+# After — correct
+elif "?" not in text:
+    error("Text contains no '?'")
+```
+
+---
 
 | Stage | What it checks |
 |---|---|
@@ -604,8 +634,7 @@ options:
 | `demo_loop.py` | 4 | End-to-end CLI — NLU extraction, state manager, audit log |
 | `termination.py` | 5 | `should_terminate()` — 5 conditions, returns `TerminationDecision` |
 | `test_cases.py` | 6 | 15 test cases — 15/15 passing |
-| `technical_report.docx` | — | 10-section technical report |
-| `presentation.pptx` | — | 8-slide presentation deck |
+
 
 ---
 
