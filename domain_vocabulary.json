@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "All controlled vocabulary lists used across schema, question bank, and retrieval engine."
+  },
+
+  "incident_types": {
+    "values": ["collision", "collision_wall", "theft", "fire", "flood", "vandalism",
+               "animal_strike", "glass_damage", "mechanical_breakdown", "unknown"],
+    "collision_subtypes": ["rear_end", "side_impact", "head_on", "rollover", "hit_and_run", "multi_vehicle"],
+    "theft_subtypes": ["full_vehicle_theft", "parts_theft", "attempted_theft"],
+    "fire_subtypes": ["engine_fire", "electrical_fire", "arson", "external_fire"],
+    "flood_subtypes": ["flash_flood", "waterlogging", "cyclone_related"]
+  },
+
+  "damage_areas": {
+    "exterior": ["front_bumper", "rear_bumper", "left_door", "right_door",
+                 "hood", "trunk", "roof", "left_fender", "right_fender",
+                 "left_headlamp", "right_headlamp", "left_tail_lamp", "right_tail_lamp",
+                 "windshield", "rear_glass", "left_side_glass", "right_side_glass",
+                 "alloy_wheels", "tyres"],
+    "mechanical": ["engine", "gearbox", "suspension", "axle", "underbody",
+                   "fuel_tank", "radiator", "exhaust"],
+    "interior": ["airbags", "dashboard", "seats", "steering", "infotainment"],
+    "severity_levels": ["minor_scratch", "dent", "panel_damage", "structural_damage", "total_loss"]
+  },
+
+  "document_types": {
+    "mandatory": ["driving_license", "rc_book", "insurance_policy_copy"],
+    "legal": ["fir_copy", "police_report", "court_notice"],
+    "financial": ["repair_estimate", "final_invoice", "towing_receipt", "medical_bills"],
+    "evidence": ["accident_photos", "damage_video", "dashcam_footage", "cctv_footage"],
+    "incident_specific": {
+      "theft": ["non_traceable_report", "keys_surrender"],
+      "fire": ["fire_brigade_report", "fire_investigation_report"],
+      "flood": ["municipal_flood_advisory"],
+      "vandalism": ["fir_copy", "witness_statement"]
+    }
+  },
+
+  "coverage_flags": {
+    "policy_types": ["comprehensive", "third_party_only", "own_damage_only"],
+    "addons": [
+      "zero_dep",
+      "roadside_assistance",
+      "engine_protection",
+      "consumables_cover",
+      "return_to_invoice",
+      "ncb_protection",
+      "key_replacement_cover",
+      "tyre_protection",
+      "daily_allowance"
+    ],
+    "exclusions": [
+      "drunk_driving",
+      "unlicensed_driver",
+      "unauthorized_driver",
+      "mechanical_breakdown_without_accident",
+      "wear_and_tear",
+      "consequential_loss",
+      "outside_geographical_limit"
+    ]
+  },
+
+  "road_types": ["highway", "urban_road", "rural_road", "expressway",
+                 "parking_lot", "private_property", "off_road"],
+
+  "weather_conditions": ["clear", "rain", "heavy_rain", "fog", "storm",
+                         "hail", "waterlogging", "night_dark", "unknown"],
+
+  "workshop_types": ["cashless_network_garage", "dealer_workshop",
+                     "independent_garage", "mobile_repair"],
+
+  "settlement_types": ["cashless", "reimbursement"],
+
+  "driver_relationships": ["self", "spouse", "child", "parent",
+                           "employee", "friend", "unauthorized_person"],
+
+  "fraud_indicators": [
+    "claim_filed_too_quickly_after_policy_start",
+    "multiple_claims_same_vehicle_short_period",
+    "damage_severity_inconsistent_with_described_incident",
+    "loss_location_outside_usual_area",
+    "no_police_report_for_major_damage",
+    "driver_details_changed_across_statements",
+    "vehicle_sold_before_claim",
+    "policy_lapsed_and_renewed_just_before_incident"
+  ],
+
+  "priority_levels": {
+    "1": "Safety, life, and legal blockers — must be asked immediately",
+    "2": "Core claim eligibility and fraud checks — ask early",
+    "3": "Damage and incident details — main body of interview",
+    "4": "Documentation and evidence gathering",
+    "5": "Settlement preferences and optional enrichment"
+  },
+
+  "question_categories": [
+    "incident_core",
+    "collision_dynamics",
+    "damage_assessment",
+    "third_party_details",
+    "legal_reporting",
+    "policy_eligibility",
+    "fraud_consistency",
+    "repair_settlement",
+    "theft_specific",
+    "fire_specific",
+    "flood_specific",
+    "vandalism_specific"
+  ]
+}

@@ -1,0 +1,5426 @@
+{
+  "summary": {
+    "input_questions": 1200,
+    "stage1_schema_pass": 1200,
+    "stage1_schema_fail": 0,
+    "stage2_logic_pass": 1200,
+    "stage2_logic_fail": 0,
+    "stage2_warnings": 1056,
+    "stage3_dedup_pass": 1200,
+    "stage3_exact_duplicates": 0,
+    "stage3_near_duplicates": 0,
+    "final_validated_questions": 1200,
+    "total_questions_removed": 0,
+    "pipeline_result": "PASS"
+  },
+  "stage1_schema_errors": [],
+  "stage2_logic_errors": [],
+  "stage2_logic_warnings": [
+    {
+      "id": "QINC0014",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_moving_or_parked' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0015",
+      "category": "incident_core",
+      "warning": "fill_field 'weather_conditions' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0016",
+      "category": "incident_core",
+      "warning": "fill_field 'visibility_conditions' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0017",
+      "category": "incident_core",
+      "warning": "fill_field 'time_of_day' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0018",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicles_involved_count' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0019",
+      "category": "incident_core",
+      "warning": "fill_field 'passengers_present' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0020",
+      "category": "incident_core",
+      "warning": "fill_field 'passenger_count' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0020",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'passengers_present' not found in schema"
+    },
+    {
+      "id": "QINC0021",
+      "category": "incident_core",
+      "warning": "fill_field 'passenger_injuries' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0021",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'passengers_present' not found in schema"
+    },
+    {
+      "id": "QINC0022",
+      "category": "incident_core",
+      "warning": "fill_field 'driver_injured' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0023",
+      "category": "incident_core",
+      "warning": "fill_field 'medical_attention_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0024",
+      "category": "incident_core",
+      "warning": "fill_field 'ambulance_called' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0024",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'medical_attention_required' not found in schema"
+    },
+    {
+      "id": "QINC0025",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_speed_estimate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0026",
+      "category": "incident_core",
+      "warning": "fill_field 'engine_running' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0027",
+      "category": "incident_core",
+      "warning": "fill_field 'distance_from_home' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0028",
+      "category": "incident_core",
+      "warning": "fill_field 'public_or_private_road' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0029",
+      "category": "incident_core",
+      "warning": "fill_field 'insurer_notified_immediately' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0030",
+      "category": "incident_core",
+      "warning": "fill_field 'reporting_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0031",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_moved_from_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0032",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_current_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0033",
+      "category": "incident_core",
+      "warning": "fill_field 'incident_chain' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0034",
+      "category": "incident_core",
+      "warning": "fill_field 'authorized_route' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0035",
+      "category": "incident_core",
+      "warning": "fill_field 'overloaded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0036",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_recently_purchased' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0037",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_modifications' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0038",
+      "category": "incident_core",
+      "warning": "fill_field 'modifications_declared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0038",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'vehicle_modifications' not found in schema"
+    },
+    {
+      "id": "QINC0039",
+      "category": "incident_core",
+      "warning": "fill_field 'anti_theft_device' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0040",
+      "category": "incident_core",
+      "warning": "fill_field 'puc_valid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0041",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_under_finance' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0042",
+      "category": "incident_core",
+      "warning": "fill_field 'incident_description' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0043",
+      "category": "incident_core",
+      "warning": "fill_field 'legally_parked' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0043",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'vehicle_moving_or_parked' not found in schema"
+    },
+    {
+      "id": "QINC0044",
+      "category": "incident_core",
+      "warning": "fill_field 'headlights_on' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0044",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'time_of_day' not found in schema"
+    },
+    {
+      "id": "QINC0045",
+      "category": "incident_core",
+      "warning": "fill_field 'wipers_functional' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0045",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'weather_conditions' not found in schema"
+    },
+    {
+      "id": "QINC0046",
+      "category": "incident_core",
+      "warning": "fill_field 'road_surface_condition' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0047",
+      "category": "incident_core",
+      "warning": "fill_field 'traffic_signals_visible' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0048",
+      "category": "incident_core",
+      "warning": "fill_field 'road_direction_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0049",
+      "category": "incident_core",
+      "warning": "fill_field 'road_construction_nearby' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0050",
+      "category": "incident_core",
+      "warning": "fill_field 'towed_from_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0051",
+      "category": "incident_core",
+      "warning": "fill_field 'towing_arranged_by' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0051",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'towed_from_scene' not found in schema"
+    },
+    {
+      "id": "QINC0052",
+      "category": "incident_core",
+      "warning": "fill_field 'towing_receipt_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0052",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'towed_from_scene' not found in schema"
+    },
+    {
+      "id": "QINC0053",
+      "category": "incident_core",
+      "warning": "fill_field 'recent_incident_history' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0054",
+      "category": "incident_core",
+      "warning": "fill_field 'prior_repair_history' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0056",
+      "category": "incident_core",
+      "warning": "fill_field 'pre_existing_damage_details' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0057",
+      "category": "incident_core",
+      "warning": "fill_field 'recent_service' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0058",
+      "category": "incident_core",
+      "warning": "fill_field 'brakes_functional' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0059",
+      "category": "incident_core",
+      "warning": "fill_field 'tyre_condition_pre_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0061",
+      "category": "incident_core",
+      "warning": "fill_field 'expressway_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0062",
+      "category": "incident_core",
+      "warning": "fill_field 'hazardous_materials' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0063",
+      "category": "incident_core",
+      "warning": "fill_field 'reversing_at_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0064",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_stationary_at_impact' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0065",
+      "category": "incident_core",
+      "warning": "fill_field 'intersection_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0066",
+      "category": "incident_core",
+      "warning": "fill_field 'turning_at_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0067",
+      "category": "incident_core",
+      "warning": "fill_field 'peak_traffic_hours' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0068",
+      "category": "incident_core",
+      "warning": "fill_field 'overtaking_at_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0069",
+      "category": "incident_core",
+      "warning": "fill_field 'special_road_structure' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0070",
+      "category": "incident_core",
+      "warning": "fill_field 'legal_parking_zone' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0070",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'vehicle_moving_or_parked' not found in schema"
+    },
+    {
+      "id": "QINC0071",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_stalled_before' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0072",
+      "category": "incident_core",
+      "warning": "fill_field 'hazard_lights_on' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0073",
+      "category": "incident_core",
+      "warning": "fill_field 'slope_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0074",
+      "category": "incident_core",
+      "warning": "fill_field 'correct_lane' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0075",
+      "category": "incident_core",
+      "warning": "fill_field 'mechanical_failure_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0076",
+      "category": "incident_core",
+      "warning": "fill_field 'tyre_burst_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0077",
+      "category": "incident_core",
+      "warning": "fill_field 'unfamiliar_route' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0078",
+      "category": "incident_core",
+      "warning": "fill_field 'claim_same_year' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0079",
+      "category": "incident_core",
+      "warning": "fill_field 'vehicle_owner_match' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0080",
+      "category": "incident_core",
+      "warning": "fill_field 'claimant_owner_relationship' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0080",
+      "category": "incident_core",
+      "warning": "required_fields_present value 'vehicle_owner_match' not found in schema"
+    },
+    {
+      "id": "QINC0081",
+      "category": "incident_core",
+      "warning": "fill_field 'test_drive_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0082",
+      "category": "incident_core",
+      "warning": "fill_field 'natural_disaster_event' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0083",
+      "category": "incident_core",
+      "warning": "fill_field 'traffic_congestion' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0084",
+      "category": "incident_core",
+      "warning": "fill_field 'horn_functional' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0085",
+      "category": "incident_core",
+      "warning": "fill_field 'animal_involvement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0086",
+      "category": "incident_core",
+      "warning": "fill_field 'road_obstacle_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0087",
+      "category": "incident_core",
+      "warning": "fill_field 'in_service_bay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0088",
+      "category": "incident_core",
+      "warning": "fill_field 'rideshare_trip_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0089",
+      "category": "incident_core",
+      "warning": "fill_field 'government_vehicle_involved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0090",
+      "category": "incident_core",
+      "warning": "fill_field 'cctv_at_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0091",
+      "category": "incident_core",
+      "warning": "fill_field 'police_at_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0093",
+      "category": "incident_core",
+      "warning": "fill_field 'area_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0094",
+      "category": "incident_core",
+      "warning": "fill_field 'traffic_violation' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0095",
+      "category": "incident_core",
+      "warning": "fill_field 'insured_purpose_use' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0096",
+      "category": "incident_core",
+      "warning": "fill_field 'self_caused_or_external' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0097",
+      "category": "incident_core",
+      "warning": "fill_field 'learner_driver' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0098",
+      "category": "incident_core",
+      "warning": "fill_field 'fleet_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0099",
+      "category": "incident_core",
+      "warning": "fill_field 'racing_track_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QINC0100",
+      "category": "incident_core",
+      "warning": "fill_field 'geographical_limit' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0001",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'impact_direction' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0002",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'own_vehicle_speed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0003",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_speed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0004",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'rear_end_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0005",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'head_on_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0006",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'side_impact_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0007",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_rollover' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0008",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'stationary_rear_impact' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0009",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'multi_vehicle_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0010",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'lane_merge_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0011",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'signal_status_at_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0011",
+      "category": "collision_dynamics",
+      "warning": "required_fields_present value 'intersection_incident' not found in schema"
+    },
+    {
+      "id": "QCOL0012",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'brakes_applied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0013",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_skid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0014",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'other_vehicle_signal_jump' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0015",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'chain_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0016",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'lane_change_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0017",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'parking_manoeuvre_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0018",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'side_street_pullout' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0019",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'unsafe_overtake_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0020",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'wrong_way_driving' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0021",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'impact_severity_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0022",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_mounted_kerb' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0023",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'sudden_braking_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0024",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'at_fault_direction' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0025",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'pedestrian_crossing_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0027",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'seatbelt_worn' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0028",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_came_to_rest_against' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0029",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'pothole_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0030",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'road_debris_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0031",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_vehicle_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0032",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'impact_angle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0033",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_spin' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0034",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'sensitive_zone_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0035",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_tyre_blowout' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0036",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'no_overtaking_zone' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0037",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_stationary' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0038",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'collision_with_object' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0039",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'collision_object_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0039",
+      "category": "collision_dynamics",
+      "warning": "required_fields_present value 'collision_with_object' not found in schema"
+    },
+    {
+      "id": "QCOL0040",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'flyover_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0041",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'parking_structure_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0043",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'evasive_action_taken' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0044",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'evasive_action_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0044",
+      "category": "collision_dynamics",
+      "warning": "required_fields_present value 'evasive_action_taken' not found in schema"
+    },
+    {
+      "id": "QCOL0045",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'secondary_impact_caused' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0046",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'divided_highway' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0047",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'roundabout_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0048",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'glare_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0049",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_stopped_before_impact' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0050",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'impact_points_count' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0051",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'private_compound_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0052",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'animal_crossing_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0053",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'pedestrian_step_out_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0054",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'collision_traffic_direction' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0055",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_vehicle_class' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0056",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'fuel_leak_post_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0057",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'door_swipe_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0058",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'correct_road_side' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0059",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'centre_line_crossed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0060",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'restricted_lane_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0061",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'structural_penetration' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0063",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'police_fault_assessment' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0063",
+      "category": "collision_dynamics",
+      "warning": "required_fields_present value 'police_at_scene' not found in schema"
+    },
+    {
+      "id": "QCOL0064",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'reverse_direction_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0065",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'third_party_admitted_fault' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0066",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'documents_exchanged_at_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0067",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'u_turn_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0068",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'slip_road_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0069",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'exit_cut_across_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0070",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'lane_position_at_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0071",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'hazard_lights_pre_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0072",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_ran_off_road' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0073",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'speed_breaker_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0075",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'no_parking_zone_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0076",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'gradient_at_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0077",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'mechanical_defect_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0078",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'bridge_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0079",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'collision_noise_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0080",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'vehicle_flipped_side' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0081",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'sensitive_dropoff_zone' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0083",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'flash_flood_collision_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0084",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'dust_storm_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0085",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'road_rage_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0088",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'emergency_drive_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0089",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'footpath_impact' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0090",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'missing_signage_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0091",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'accident_black_spot' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0092",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'airbag_failure' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0093",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'stolen_vehicle_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0094",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'adas_equipped' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0095",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'toll_plaza_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0096",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'tunnel_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0097",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'road_obstacle_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0098",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'level_crossing_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0099",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'roadwork_zone_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QCOL0100",
+      "category": "collision_dynamics",
+      "warning": "fill_field 'ferry_collision' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0019",
+      "category": "damage_assessment",
+      "warning": "fill_field 'fluid_leakage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0032",
+      "category": "damage_assessment",
+      "warning": "fill_field 'post_incident_smoke' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0033",
+      "category": "damage_assessment",
+      "warning": "fill_field 'fluid_leakage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0037",
+      "category": "damage_assessment",
+      "warning": "fill_field 'repair_workshop_name' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0039",
+      "category": "damage_assessment",
+      "warning": "fill_field 'interior_water_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0041",
+      "category": "damage_assessment",
+      "warning": "fill_field 'warning_lights_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0061",
+      "category": "damage_assessment",
+      "warning": "fill_field 'damage_distribution' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0063",
+      "category": "damage_assessment",
+      "warning": "required_fields_present value 'total_loss_assessed' not found in schema"
+    },
+    {
+      "id": "QDAM0064",
+      "category": "damage_assessment",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0065",
+      "category": "damage_assessment",
+      "warning": "fill_field 'repaired_before_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0069",
+      "category": "damage_assessment",
+      "warning": "fill_field 'damage_side_predominance' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0075",
+      "category": "damage_assessment",
+      "warning": "fill_field 'rescue_operation_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0076",
+      "category": "damage_assessment",
+      "warning": "fill_field 'suspension_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0089",
+      "category": "damage_assessment",
+      "warning": "fill_field 'esc_fault' not found in schema (may be derived)"
+    },
+    {
+      "id": "QDAM0095",
+      "category": "damage_assessment",
+      "warning": "fill_field 'interior_water_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0004",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_vehicle_color' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0005",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_vehicle_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0010",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_policy_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0011",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_licence_valid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0012",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_licence_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0013",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_owner_driver' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0014",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_dui' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0015",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_cooperative' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0016",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_denied_fault' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0017",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_rc_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0018",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_vehicle_occupied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0019",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_passenger_injuries' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0022",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_vehicle_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0023",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_towed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0026",
+      "category": "third_party_details",
+      "warning": "fill_field 'hit_and_run_description' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0029",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_threatening' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0030",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_called_police' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0031",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_government_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0032",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_emergency_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0033",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_medical_attention' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0035",
+      "category": "third_party_details",
+      "warning": "fill_field 'private_settlement_offer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0036",
+      "category": "third_party_details",
+      "warning": "fill_field 'private_settlement_amount' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0036",
+      "category": "third_party_details",
+      "warning": "required_fields_present value 'private_settlement_offer' not found in schema"
+    },
+    {
+      "id": "QTHI0037",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_stationary' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0038",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_dashcam' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0039",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_overloaded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0041",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_insurance_displayed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0042",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_same_state_reg' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0043",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_claim_intimation_filed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0045",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_minor_driver' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0046",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_rental_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0047",
+      "category": "third_party_details",
+      "warning": "fill_field 'pedestrian_crosswalk' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0048",
+      "category": "third_party_details",
+      "warning": "fill_field 'pedestrian_hospitalised' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0049",
+      "category": "third_party_details",
+      "warning": "fill_field 'pedestrian_police_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0050",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_fitness_cert' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0051",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_foreign_national' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0052",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_insurer_survey' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0053",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_repair_cost' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0054",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_goods_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0055",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_passenger_compensation_demand' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0056",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_fleet_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0057",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_mediation_agreed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0058",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_ownership_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0059",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_defect' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0060",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_prior_accident_history' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0061",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_licence_suspended' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0062",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0063",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_address_noted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0064",
+      "category": "third_party_details",
+      "warning": "fill_field 'scene_agreement_signed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0065",
+      "category": "third_party_details",
+      "warning": "fill_field 'mediator_present' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0066",
+      "category": "third_party_details",
+      "warning": "fill_field 'bystander_evidence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0067",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_plate_obscured' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0068",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_denied_involvement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0070",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_cash_settlement_demand' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0072",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_cab_aggregator' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0073",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_insurer_contacted_you' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0074",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_learner_licence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0075",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_criminal_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0076",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_false_details' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0077",
+      "category": "third_party_details",
+      "warning": "fill_field 'police_statements_taken' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0077",
+      "category": "third_party_details",
+      "warning": "required_fields_present value 'police_at_scene' not found in schema"
+    },
+    {
+      "id": "QTHI0078",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_foreign_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0079",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_hazardous_load' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0080",
+      "category": "third_party_details",
+      "warning": "fill_field 'own_policy_details_shared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0081",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_commercial_licence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0082",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_gps_tracker' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0083",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_language_barrier' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0084",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_school_bus' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0086",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_hospital_name' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0088",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_minor_passenger' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0089",
+      "category": "third_party_details",
+      "warning": "fill_field 'vehicles_involved_count' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0090",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_taxi_with_passengers' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0091",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_signage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0092",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_mobile_phone_use' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0093",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_impounded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0094",
+      "category": "third_party_details",
+      "warning": "fill_field 'joint_inspection_conducted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0095",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_insurer_denied_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0097",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_vehicle_not_in_name' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0098",
+      "category": "third_party_details",
+      "warning": "fill_field 'tp_tribunal_settlement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0099",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_government_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHI0100",
+      "category": "third_party_details",
+      "warning": "fill_field 'third_party_fitness_cert' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0004",
+      "category": "legal_reporting",
+      "warning": "fill_field 'fir_filing_datetime' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0006",
+      "category": "legal_reporting",
+      "warning": "fill_field 'no_police_report_reason' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0007",
+      "category": "legal_reporting",
+      "warning": "fill_field 'private_settlement_no_police' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0010",
+      "category": "legal_reporting",
+      "warning": "fill_field 'witness_relationship' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0011",
+      "category": "legal_reporting",
+      "warning": "fill_field 'witness_statement_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0013",
+      "category": "legal_reporting",
+      "warning": "fill_field 'cctv_preserved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0015",
+      "category": "legal_reporting",
+      "warning": "fill_field 'dashcam_unedited' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0016",
+      "category": "legal_reporting",
+      "warning": "fill_field 'mact_petition_filed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0018",
+      "category": "legal_reporting",
+      "warning": "fill_field 'lawyer_engaged' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0019",
+      "category": "legal_reporting",
+      "warning": "fill_field 'insurer_informed_legal' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0020",
+      "category": "legal_reporting",
+      "warning": "fill_field 'challan_issued' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0021",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'challan_issued' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0021",
+      "category": "legal_reporting",
+      "warning": "fill_field 'challan_reason' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0022",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'challan_issued' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0022",
+      "category": "legal_reporting",
+      "warning": "fill_field 'challan_paid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0023",
+      "category": "legal_reporting",
+      "warning": "fill_field 'vehicle_seized' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0024",
+      "category": "legal_reporting",
+      "warning": "fill_field 'licence_seized' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0025",
+      "category": "legal_reporting",
+      "warning": "fill_field 'legal_sections_invoked' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0026",
+      "category": "legal_reporting",
+      "warning": "fill_field 'driver_arrested' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0027",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'driver_arrested' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0027",
+      "category": "legal_reporting",
+      "warning": "fill_field 'bail_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0028",
+      "category": "legal_reporting",
+      "warning": "fill_field 'court_date_set' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0029",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'court_date_set' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0029",
+      "category": "legal_reporting",
+      "warning": "fill_field 'insurer_informed_court' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0030",
+      "category": "legal_reporting",
+      "warning": "fill_field 'rto_reported' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0031",
+      "category": "legal_reporting",
+      "warning": "fill_field 'panchanama_prepared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0032",
+      "category": "legal_reporting",
+      "warning": "required_fields_present value 'panchanama_prepared' not found in schema"
+    },
+    {
+      "id": "QLEG0033",
+      "category": "legal_reporting",
+      "warning": "fill_field 'licence_in_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0034",
+      "category": "legal_reporting",
+      "warning": "fill_field 'tp_reg_in_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0035",
+      "category": "legal_reporting",
+      "warning": "fill_field 'breathalyser_administered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0036",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'breathalyser_administered' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0037",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'breathalyser_administered' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0037",
+      "category": "legal_reporting",
+      "warning": "fill_field 'blood_sample_collected' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0038",
+      "category": "legal_reporting",
+      "warning": "fill_field 'hit_and_run_in_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0039",
+      "category": "legal_reporting",
+      "warning": "fill_field 'fatal_in_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0040",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'medical_attention_required' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0040",
+      "category": "legal_reporting",
+      "warning": "fill_field 'mlc_opened' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0041",
+      "category": "legal_reporting",
+      "warning": "fill_field 'mlc_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0041",
+      "category": "legal_reporting",
+      "warning": "required_fields_present value 'mlc_opened' not found in schema"
+    },
+    {
+      "id": "QLEG0042",
+      "category": "legal_reporting",
+      "warning": "fill_field 'vehicle_prior_police_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0043",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_statement_dispute' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0044",
+      "category": "legal_reporting",
+      "warning": "fill_field 'negligent_driving_complaint' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0045",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_investigation_status' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0046",
+      "category": "legal_reporting",
+      "warning": "fill_field 'recovery_notice_sent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0047",
+      "category": "legal_reporting",
+      "warning": "fill_field 'recovery_consent_given' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0048",
+      "category": "legal_reporting",
+      "warning": "fill_field 'subrogation_signed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0049",
+      "category": "legal_reporting",
+      "warning": "fill_field 'no_claim_declaration' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0050",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_report_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0051",
+      "category": "legal_reporting",
+      "warning": "fill_field 'independent_investigator' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0052",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_scene_photos' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0053",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_incident_sketch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0054",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_ordered_towing' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0055",
+      "category": "legal_reporting",
+      "warning": "fill_field 'district_hit_run_scheme' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0056",
+      "category": "legal_reporting",
+      "warning": "fill_field 'driver_statement_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0057",
+      "category": "legal_reporting",
+      "warning": "fill_field 'ex_parte_order' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0058",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'court_date_set' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0058",
+      "category": "legal_reporting",
+      "warning": "fill_field 'court_judgment' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0059",
+      "category": "legal_reporting",
+      "warning": "fill_field 'court_directed_insurer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0059",
+      "category": "legal_reporting",
+      "warning": "required_fields_present value 'court_judgment' not found in schema"
+    },
+    {
+      "id": "QLEG0060",
+      "category": "legal_reporting",
+      "warning": "fill_field 'legal_notice_responded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0061",
+      "category": "legal_reporting",
+      "warning": "fill_field 'stay_order_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0063",
+      "category": "legal_reporting",
+      "warning": "fill_field 'section_279_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0064",
+      "category": "legal_reporting",
+      "warning": "fill_field 'section_304a_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0065",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'mact_petition_filed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0065",
+      "category": "legal_reporting",
+      "warning": "fill_field 'mact_settlement_reached' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0066",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_report_timely' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0067",
+      "category": "legal_reporting",
+      "warning": "fill_field 'fir_delay_explained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0068",
+      "category": "legal_reporting",
+      "warning": "fill_field 'insurer_required_police_complaint' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0069",
+      "category": "legal_reporting",
+      "warning": "fill_field 'tp_fault_contested_police' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0070",
+      "category": "legal_reporting",
+      "warning": "fill_field 'gd_entry_made' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0071",
+      "category": "legal_reporting",
+      "warning": "fill_field 'gd_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0071",
+      "category": "legal_reporting",
+      "warning": "required_fields_present value 'gd_entry_made' not found in schema"
+    },
+    {
+      "id": "QLEG0072",
+      "category": "legal_reporting",
+      "warning": "fill_field 'criminal_summons_received' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0073",
+      "category": "legal_reporting",
+      "warning": "fill_field 'insurance_investigator_appointed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0074",
+      "category": "legal_reporting",
+      "warning": "fill_field 'case_compounded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0075",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'licence_seized' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0075",
+      "category": "legal_reporting",
+      "warning": "fill_field 'licence_returned' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0076",
+      "category": "legal_reporting",
+      "warning": "fill_field 'legal_status_special_case' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0077",
+      "category": "legal_reporting",
+      "warning": "fill_field 'rta_inquiry' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0078",
+      "category": "legal_reporting",
+      "warning": "fill_field 'vehicle_confiscated_evidence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0079",
+      "category": "legal_reporting",
+      "warning": "fill_field 'search_warrant' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0080",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'vehicle_seized' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0080",
+      "category": "legal_reporting",
+      "warning": "fill_field 'vehicle_released_custody' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0081",
+      "category": "legal_reporting",
+      "warning": "fill_field 'police_checkpoint_evasion' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0082",
+      "category": "legal_reporting",
+      "warning": "fill_field 'insurer_intervention_petition' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0083",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'vehicle_seized' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0083",
+      "category": "legal_reporting",
+      "warning": "fill_field 'noc_issued' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0084",
+      "category": "legal_reporting",
+      "warning": "fill_field 'advocate_during_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0085",
+      "category": "legal_reporting",
+      "warning": "fill_field 'mv_act_134_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0086",
+      "category": "legal_reporting",
+      "warning": "fill_field 'tp_legal_rep_present' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0088",
+      "category": "legal_reporting",
+      "warning": "fill_field 'licence_endorsement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0089",
+      "category": "legal_reporting",
+      "warning": "fill_field 'endorsement_noted_police' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0089",
+      "category": "legal_reporting",
+      "warning": "required_fields_present value 'licence_endorsement' not found in schema"
+    },
+    {
+      "id": "QLEG0090",
+      "category": "legal_reporting",
+      "warning": "fill_field 'video_submitted_police' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0091",
+      "category": "legal_reporting",
+      "warning": "fill_field 'final_investigation_report' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0092",
+      "category": "legal_reporting",
+      "warning": "fill_field 'closure_report_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0093",
+      "category": "legal_reporting",
+      "warning": "fill_field 'collision_investigation_team' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0094",
+      "category": "legal_reporting",
+      "warning": "fill_field 'solatium_fund_claimed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0095",
+      "category": "legal_reporting",
+      "warning": "fill_field 'charge_sheet_filed_court' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0096",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'driver_arrested' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0096",
+      "category": "legal_reporting",
+      "warning": "fill_field 'remand_application' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0097",
+      "category": "legal_reporting",
+      "warning": "fill_field 'lok_adalat_referral' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0098",
+      "category": "legal_reporting",
+      "warning": "fill_field 'public_prosecutor_assigned' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0099",
+      "category": "legal_reporting",
+      "warning": "Trigger key 'challan_issued' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QLEG0099",
+      "category": "legal_reporting",
+      "warning": "fill_field 'compounding_application' not found in schema (may be derived)"
+    },
+    {
+      "id": "QLEG0100",
+      "category": "legal_reporting",
+      "warning": "fill_field 'high_court_stay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0006",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_duration_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0007",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'premium_paid_timely' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0008",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_lapse_history' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0009",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'renewed_in_grace' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0009",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'policy_lapse_history' not found in schema"
+    },
+    {
+      "id": "QPOL0010",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_named_insured' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0011",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'claimant_is_policyholder' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0012",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'idv_on_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0013",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'idv_current' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0027",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_new_or_renewal' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0028",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'same_insurer_renewal' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0029",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'ncb_carried_forward' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0030",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'ncb_certificate_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0031",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'rc_policy_name_match' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0032",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'vehicle_transferred' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0033",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_transferred' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0033",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'vehicle_transferred' not found in schema"
+    },
+    {
+      "id": "QPOL0035",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'hire_or_reward_use' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0036",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'driver_authorised_on_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0037",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'named_driver_added' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0038",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'licence_verified_at_issuance' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0039",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_endorsements' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0040",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'insured_purpose_use' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0041",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'timely_notification' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0042",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'notification_period' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0043",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'exclusion_clause_relevant' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0044",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'natural_disaster_covered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0045",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'theft_covered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0046",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'driver_age_eligible' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0047",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'deductible_applicable' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0048",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'group_or_individual_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0049",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_issuance_channel' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0050",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'break_in_inspection_done' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0051",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'damage_declared_at_issuance' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0052",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_under_dispute' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0053",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'co_insurance_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0054",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'cashless_garage_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0055",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'claim_intimation_channel' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0056",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'claim_reference_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0058",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'surveyor_inspection_done' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0059",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'surveyor_report_shared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0061",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'surveyor_assessment_disputed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0062",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'independent_surveyor_requested' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0063",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'financier_notification_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0063",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QPOL0064",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'financier_loss_payee' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0064",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QPOL0065",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'hypothecation_terminated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0066",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'company_registered_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0067",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'company_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0067",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'company_registered_vehicle' not found in schema"
+    },
+    {
+      "id": "QPOL0068",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'company_authorisation_letter' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0068",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'company_registered_vehicle' not found in schema"
+    },
+    {
+      "id": "QPOL0069",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'vintage_vehicle_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0070",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'agreed_value_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0071",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'anti_theft_discount' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0072",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'voluntary_deductible' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0073",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'voluntary_deductible_amount' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0073",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'voluntary_deductible' not found in schema"
+    },
+    {
+      "id": "QPOL0074",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'yellow_board_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0075",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'commercial_permit_valid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0076",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'fitness_certificate_valid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0077",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'imported_vehicle_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0078",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_cancelled' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0079",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_reinstated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0079",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'policy_cancelled' not found in schema"
+    },
+    {
+      "id": "QPOL0081",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'senior_citizen_discount' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0082",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'bundled_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0083",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'epolicy_accessible' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0084",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'misp_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0086",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'owner_driver_pa_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0087",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'cashless_auth_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0088",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'repair_started_without_approval' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0089",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'policy_schedule_received' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0090",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'digital_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0091",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'risk_commencement_before_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0092",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'correct_vehicle_on_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0093",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'reregistered_policy_updated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0094",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'engine_chassis_tampered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0095",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'geographical_limit' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0096",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'co_payment_clause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0097",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'premium_receipt_digital' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0098",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'pre_renewal_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0099",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'blanket_fleet_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0100",
+      "category": "policy_eligibility",
+      "warning": "fill_field 'fleet_policy_accurate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QPOL0100",
+      "category": "policy_eligibility",
+      "warning": "required_fields_present value 'fleet_policy' not found in schema"
+    },
+    {
+      "id": "QFRD0001",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'policy_very_recent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0002",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'incident_very_soon_after_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0002",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0003",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0004",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'inflated_valuation' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0005",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0005",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0006",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'repair_cost_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0007",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'odd_time_no_witness' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0008",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'isolated_no_cctv' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0009",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'same_workshop_all_claims' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0010",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'high_fraud_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0011",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'repeated_witnesses' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0012",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'vehicle_transferred_before_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0012",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0013",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'cross_insurer_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0014",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'duplicate_licence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0014",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0015",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'document_alteration' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0015",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0016",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'double_dipping_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0017",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claimant_unreachable' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0018",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'inspection_refused' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0019",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'repaired_before_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0019",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0020",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'unusual_odometer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0021",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0022",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0023",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0024",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'tp_same_insurer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0025",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claimant_tp_related' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0026",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0027",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'collision_site_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0028",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'scene_physical_evidence_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0029",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'vehicle_for_sale_before_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0030",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'idv_vs_market_gap' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0031",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'financial_stress_indicator' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0032",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'premeditated_claim_indicator' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0033",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'location_inconsistent_with_routes' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0034",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'workshop_no_gst' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0035",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'unrelated_parts_in_estimate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0036",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'dual_claim_same_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0037",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0037",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0038",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claimant_presence_at_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0039",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0040",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'photos_no_metadata' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0041",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'vin_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0041",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0042",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fir_verified_genuine' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0043",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'workshop_identity_unclear' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0045",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'theft_recovery_suspicious' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0046",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fire_known_defect' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0047",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fire_after_recall_notice' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0048",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'duplicate_bills' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0049",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'staged_damage_for_sale' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0050",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'estimate_inflated_for_insurance' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0051",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'continuous_workshop_stay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0052",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'address_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0053",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fuel_type_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0054",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'stolen_vehicle_seen_driven' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0054",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0055",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'out_of_state_unusual_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0056",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'no_contact_evidence_at_site' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0057",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'coordinated_staged_accident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0057",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0058",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claimant_vague_on_details' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0060",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'scripted_witness_statements' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0061",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'location_inaccessible_at_time' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0062",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'estimate_pre_surveyor' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0063",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'predated_social_media_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0064",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'flood_area_not_flooded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0065",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'tp_insurer_denying_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0066",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'gps_location_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0066",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0067",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'tyre_damage_inconsistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0068",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claim_before_anniversary' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0069",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'aged_vs_claimed_new_parts' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0070",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0071",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'workshop_sig_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0072",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fire_accelerant_suspected' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0073",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claimant_out_of_city' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0074",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'over_insured_cheap_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0075",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'odometer_rewound' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0075",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0076",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fake_witness' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0077",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'engine_chassis_tampered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0077",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0078",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claim_without_policyholder_knowledge' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0079",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'settlement_account_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0080",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'surveyor_sig_unverified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0081",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'pa_and_od_same_incident' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0083",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'unrelated_parts_in_estimate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0084",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'camera_blind_spot_suspicious' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0085",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0086",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'theft_impossible_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0088",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'reconstruction_contradicts_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0089",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'surveyor_pressured' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0090",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'fraud_associated_lawyer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0091",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claim_exceeds_market_value' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0091",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0092",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'reporting_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0093",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'claim_form_red_flags' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0094",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'original_policy_not_produced' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0095",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'location_inconsistent_with_routes' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0096",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'two_estimates_submitted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0097",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'defunct_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0098",
+      "category": "fraud_consistency",
+      "warning": "Fraud question at Priority 1 — only hard fraud flags should be P1"
+    },
+    {
+      "id": "QFRD0099",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFRD0100",
+      "category": "fraud_consistency",
+      "warning": "fill_field 'idv_vs_market_gap' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0003",
+      "category": "repair_settlement",
+      "warning": "fill_field 'workshop_in_network' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0004",
+      "category": "repair_settlement",
+      "warning": "fill_field 'vehicle_at_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0005",
+      "category": "repair_settlement",
+      "warning": "fill_field 'dealer_vs_independent_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0006",
+      "category": "repair_settlement",
+      "warning": "fill_field 'estimate_shared_with_insurer' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0008",
+      "category": "repair_settlement",
+      "warning": "fill_field 'estimate_itemised' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0009",
+      "category": "repair_settlement",
+      "warning": "fill_field 'pre_repair_survey' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0010",
+      "category": "repair_settlement",
+      "warning": "fill_field 'cashless_auth_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0011",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_started_without_approval' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0012",
+      "category": "repair_settlement",
+      "warning": "fill_field 'original_parts_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0013",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_completed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0014",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_completion_date' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0015",
+      "category": "repair_settlement",
+      "warning": "fill_field 'bodywork_included' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0016",
+      "category": "repair_settlement",
+      "warning": "fill_field 'consumables_in_estimate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0017",
+      "category": "repair_settlement",
+      "warning": "fill_field 'consumables_covered_addon' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0017",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'consumables_addon' not found in schema"
+    },
+    {
+      "id": "QREP0018",
+      "category": "repair_settlement",
+      "warning": "fill_field 'oem_vs_aftermarket' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0019",
+      "category": "repair_settlement",
+      "warning": "fill_field 'zero_dep_applied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0019",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'zero_dep_addon' not found in schema"
+    },
+    {
+      "id": "QREP0020",
+      "category": "repair_settlement",
+      "warning": "fill_field 'depreciation_explained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0021",
+      "category": "repair_settlement",
+      "warning": "fill_field 'towing_cost_claimed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0022",
+      "category": "repair_settlement",
+      "warning": "fill_field 'roadside_assistance_availed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0023",
+      "category": "repair_settlement",
+      "warning": "fill_field 'rsa_within_coverage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0023",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'roadside_assistance_addon' not found in schema"
+    },
+    {
+      "id": "QREP0024",
+      "category": "repair_settlement",
+      "warning": "fill_field 'daily_allowance_claimed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0024",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'daily_allowance_benefit' not found in schema"
+    },
+    {
+      "id": "QREP0025",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_downtime_days' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0026",
+      "category": "repair_settlement",
+      "warning": "fill_field 'total_loss_assessed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0027",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'total_loss_assessed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0027",
+      "category": "repair_settlement",
+      "warning": "fill_field 'policyholder_agrees_total_loss' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0028",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'total_loss_assessed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0028",
+      "category": "repair_settlement",
+      "warning": "fill_field 'rti_claim_triggered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0028",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'rti_addon' not found in schema"
+    },
+    {
+      "id": "QREP0029",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'total_loss_assessed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0029",
+      "category": "repair_settlement",
+      "warning": "fill_field 'salvage_deducted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0030",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'total_loss_assessed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0030",
+      "category": "repair_settlement",
+      "warning": "fill_field 'salvage_retention_preference' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0031",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_offer_received' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0032",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_offer_agreed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0032",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'settlement_offer_received' not found in schema"
+    },
+    {
+      "id": "QREP0033",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'settlement_offer_agreed' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0033",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_disagreement_reason' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0034",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_shortfall' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0035",
+      "category": "repair_settlement",
+      "warning": "fill_field 'cashless_payment_made' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0036",
+      "category": "repair_settlement",
+      "warning": "fill_field 'original_invoices_submitted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0037",
+      "category": "repair_settlement",
+      "warning": "fill_field 'claim_settled_on_time' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0038",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_via_neft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0039",
+      "category": "repair_settlement",
+      "warning": "fill_field 'bank_details_provided' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0040",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_to_financier' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0040",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QREP0041",
+      "category": "repair_settlement",
+      "warning": "fill_field 'claim_repudiated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0042",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'claim_repudiated' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0042",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repudiation_reason' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0043",
+      "category": "repair_settlement",
+      "warning": "Trigger key 'claim_repudiated' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QREP0043",
+      "category": "repair_settlement",
+      "warning": "fill_field 'grievance_filed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0044",
+      "category": "repair_settlement",
+      "warning": "fill_field 'ombudsman_complaint' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0044",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'grievance_filed' not found in schema"
+    },
+    {
+      "id": "QREP0045",
+      "category": "repair_settlement",
+      "warning": "fill_field 'partial_settlement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0046",
+      "category": "repair_settlement",
+      "warning": "fill_field 'deductible_applied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0047",
+      "category": "repair_settlement",
+      "warning": "fill_field 're_inspection_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0048",
+      "category": "repair_settlement",
+      "warning": "fill_field 'supplementary_claim_approved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0049",
+      "category": "repair_settlement",
+      "warning": "fill_field 'supplementary_survey_timely' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0049",
+      "category": "repair_settlement",
+      "warning": "required_fields_present value 'supplementary_claim_approved' not found in schema"
+    },
+    {
+      "id": "QREP0050",
+      "category": "repair_settlement",
+      "warning": "fill_field 'invoice_higher_than_estimate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0051",
+      "category": "repair_settlement",
+      "warning": "fill_field 'workshop_accepts_approved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0052",
+      "category": "repair_settlement",
+      "warning": "fill_field 'discharge_voucher_signed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0053",
+      "category": "repair_settlement",
+      "warning": "fill_field 'discharge_signed_early' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0054",
+      "category": "repair_settlement",
+      "warning": "fill_field 'salvage_parts_undisclosed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0055",
+      "category": "repair_settlement",
+      "warning": "fill_field 'gst_invoice_correct' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0056",
+      "category": "repair_settlement",
+      "warning": "fill_field 'gst_input_credit' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0057",
+      "category": "repair_settlement",
+      "warning": "fill_field 'quality_inspection_done' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0058",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_quality_satisfied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0059",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_warranty_provided' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0060",
+      "category": "repair_settlement",
+      "warning": "fill_field 'test_drive_post_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0061",
+      "category": "repair_settlement",
+      "warning": "fill_field 'digi_locker_used' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0062",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_auth_code_shared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0063",
+      "category": "repair_settlement",
+      "warning": "fill_field 'vehicle_delivery_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0064",
+      "category": "repair_settlement",
+      "warning": "fill_field 'post_repair_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0065",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_below_idv' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0066",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_basis' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0067",
+      "category": "repair_settlement",
+      "warning": "fill_field 'labour_rate_approved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0068",
+      "category": "repair_settlement",
+      "warning": "fill_field 'job_card_issued' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0069",
+      "category": "repair_settlement",
+      "warning": "fill_field 'job_card_in_invoice' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0070",
+      "category": "repair_settlement",
+      "warning": "fill_field 'surveyor_at_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0071",
+      "category": "repair_settlement",
+      "warning": "fill_field 'imported_parts_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0072",
+      "category": "repair_settlement",
+      "warning": "fill_field 'vehicle_safe_custody_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0073",
+      "category": "repair_settlement",
+      "warning": "fill_field 'workshop_theft_during_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0074",
+      "category": "repair_settlement",
+      "warning": "fill_field 'warranty_repair_applicable' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0075",
+      "category": "repair_settlement",
+      "warning": "fill_field 'partial_vs_full_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0076",
+      "category": "repair_settlement",
+      "warning": "fill_field 'second_estimate_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0077",
+      "category": "repair_settlement",
+      "warning": "fill_field 'workshop_brand_authorised' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0078",
+      "category": "repair_settlement",
+      "warning": "fill_field 'repair_on_time' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0079",
+      "category": "repair_settlement",
+      "warning": "fill_field 'personal_belongings_intact' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0080",
+      "category": "repair_settlement",
+      "warning": "fill_field 'subrogation_letter_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0081",
+      "category": "repair_settlement",
+      "warning": "fill_field 'ncb_recovery_applied' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0082",
+      "category": "repair_settlement",
+      "warning": "fill_field 'app_confirmed_settlement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0083",
+      "category": "repair_settlement",
+      "warning": "fill_field 'surveyor_independence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0084",
+      "category": "repair_settlement",
+      "warning": "fill_field 'parts_labour_separately_listed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0085",
+      "category": "repair_settlement",
+      "warning": "fill_field 'helpdesk_contacted_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0086",
+      "category": "repair_settlement",
+      "warning": "fill_field 'settlement_matches_surveyor' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0087",
+      "category": "repair_settlement",
+      "warning": "fill_field 'vehicle_gst_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0088",
+      "category": "repair_settlement",
+      "warning": "fill_field 'workshop_licence_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0089",
+      "category": "repair_settlement",
+      "warning": "fill_field 'road_test_certificate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0090",
+      "category": "repair_settlement",
+      "warning": "fill_field 'ppf_post_repair' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0091",
+      "category": "repair_settlement",
+      "warning": "fill_field 'claim_closure_letter' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0092",
+      "category": "repair_settlement",
+      "warning": "fill_field 'claim_reopened' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0093",
+      "category": "repair_settlement",
+      "warning": "fill_field 'provisional_payment_made' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0094",
+      "category": "repair_settlement",
+      "warning": "fill_field 'invoice_hsn_codes' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0095",
+      "category": "repair_settlement",
+      "warning": "fill_field 'cat_event_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0096",
+      "category": "repair_settlement",
+      "warning": "fill_field 'cashless_auth_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0097",
+      "category": "repair_settlement",
+      "warning": "fill_field 'garage_mou_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0098",
+      "category": "repair_settlement",
+      "warning": "fill_field 'road_test_certificate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0099",
+      "category": "repair_settlement",
+      "warning": "fill_field 'public_holiday_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QREP0100",
+      "category": "repair_settlement",
+      "warning": "fill_field 'warranty_repair_applicable' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0001",
+      "category": "theft_specific",
+      "warning": "fill_field 'last_seen_before_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0001",
+      "category": "theft_specific",
+      "warning": "Priority 1 in incident-specific category 'theft_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QTHF0002",
+      "category": "theft_specific",
+      "warning": "Priority 1 in incident-specific category 'theft_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QTHF0004",
+      "category": "theft_specific",
+      "warning": "fill_field 'paid_parking_at_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0006",
+      "category": "theft_specific",
+      "warning": "fill_field 'original_keys_handed_over' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0007",
+      "category": "theft_specific",
+      "warning": "fill_field 'duplicate_keys_made' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0009",
+      "category": "theft_specific",
+      "warning": "fill_field 'steering_lock_status' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0010",
+      "category": "theft_specific",
+      "warning": "fill_field 'gear_lock_engaged' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0012",
+      "category": "theft_specific",
+      "warning": "fill_field 'gps_tracker_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0013",
+      "category": "theft_specific",
+      "warning": "fill_field 'gps_last_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0014",
+      "category": "theft_specific",
+      "warning": "fill_field 'gps_tampered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0016",
+      "category": "theft_specific",
+      "warning": "fill_field 'recovery_location_time' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0017",
+      "category": "theft_specific",
+      "warning": "fill_field 'recovery_condition' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0018",
+      "category": "theft_specific",
+      "warning": "fill_field 'parts_missing_recovery' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0019",
+      "category": "theft_specific",
+      "warning": "Priority 1 in incident-specific category 'theft_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QTHF0020",
+      "category": "theft_specific",
+      "warning": "fill_field 'area_searched_before_fir' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0021",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_discovery_delay' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0024",
+      "category": "theft_specific",
+      "warning": "fill_field 'cctv_preserved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0025",
+      "category": "theft_specific",
+      "warning": "fill_field 'parking_attendant_on_duty' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0026",
+      "category": "theft_specific",
+      "warning": "fill_field 'attendant_statement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0026",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'parking_attendant_on_duty' not found in schema"
+    },
+    {
+      "id": "QTHF0027",
+      "category": "theft_specific",
+      "warning": "fill_field 'vehicle_locked_before_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0028",
+      "category": "theft_specific",
+      "warning": "fill_field 'alarm_immobiliser_active' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0029",
+      "category": "theft_specific",
+      "warning": "fill_field 'alarm_triggered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0029",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'alarm_immobiliser_active' not found in schema"
+    },
+    {
+      "id": "QTHF0030",
+      "category": "theft_specific",
+      "warning": "fill_field 'immobiliser_bypassed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0030",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'alarm_immobiliser_active' not found in schema"
+    },
+    {
+      "id": "QTHF0031",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_type_opportunistic_targeted' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0032",
+      "category": "theft_specific",
+      "warning": "fill_field 'regular_parking_spot' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0033",
+      "category": "theft_specific",
+      "warning": "fill_field 'residential_complex_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0034",
+      "category": "theft_specific",
+      "warning": "fill_field 'commercial_area_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0035",
+      "category": "theft_specific",
+      "warning": "fill_field 'public_event_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0036",
+      "category": "theft_specific",
+      "warning": "fill_field 'stolen_during_work_hours' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0037",
+      "category": "theft_specific",
+      "warning": "fill_field 'night_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0038",
+      "category": "theft_specific",
+      "warning": "fill_field 'festival_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0039",
+      "category": "theft_specific",
+      "warning": "fill_field 'stolen_within_week_purchase' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0040",
+      "category": "theft_specific",
+      "warning": "fill_field 'number_plate_removed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0041",
+      "category": "theft_specific",
+      "warning": "fill_field 'personal_property_inside' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0042",
+      "category": "theft_specific",
+      "warning": "fill_field 'personal_property_claim' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0042",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'personal_property_inside' not found in schema"
+    },
+    {
+      "id": "QTHF0043",
+      "category": "theft_specific",
+      "warning": "fill_field 'ntc_obtained' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0044",
+      "category": "theft_specific",
+      "warning": "fill_field 'ntc_timely' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0044",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'ntc_obtained' not found in schema"
+    },
+    {
+      "id": "QTHF0045",
+      "category": "theft_specific",
+      "warning": "fill_field 'rc_surrendered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0046",
+      "category": "theft_specific",
+      "warning": "fill_field 'rto_form_filed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0047",
+      "category": "theft_specific",
+      "warning": "fill_field 'financier_informed_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0047",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QTHF0048",
+      "category": "theft_specific",
+      "warning": "fill_field 'emi_suspended' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0048",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QTHF0049",
+      "category": "theft_specific",
+      "warning": "fill_field 'high_value_vehicle_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0050",
+      "category": "theft_specific",
+      "warning": "fill_field 'stolen_vehicle_found_other_state' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0051",
+      "category": "theft_specific",
+      "warning": "fill_field 'interstate_transit_tracked' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0052",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_jurisdiction_correct' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0053",
+      "category": "theft_specific",
+      "warning": "fill_field 'reward_offered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0054",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_ring_pattern' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0055",
+      "category": "theft_specific",
+      "warning": "fill_field 'multiple_thefts_same_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0056",
+      "category": "theft_specific",
+      "warning": "fill_field 'national_theft_tracking_reported' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0057",
+      "category": "theft_specific",
+      "warning": "fill_field 'vahan_portal_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0058",
+      "category": "theft_specific",
+      "warning": "fill_field 'fastag_deactivated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0059",
+      "category": "theft_specific",
+      "warning": "fill_field 'fastag_post_theft_activity' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0059",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'fastag_deactivated' not found in schema"
+    },
+    {
+      "id": "QTHF0060",
+      "category": "theft_specific",
+      "warning": "fill_field 'ransom_demand' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0061",
+      "category": "theft_specific",
+      "warning": "fill_field 'known_person_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0062",
+      "category": "theft_specific",
+      "warning": "fill_field 'last_key_holder_reports' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0063",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_after_short_trip' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0064",
+      "category": "theft_specific",
+      "warning": "fill_field 'parking_guarded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0065",
+      "category": "theft_specific",
+      "warning": "fill_field 'anti_theft_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0066",
+      "category": "theft_specific",
+      "warning": "fill_field 'suspicious_activity_pre_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0067",
+      "category": "theft_specific",
+      "warning": "fill_field 'common_theft_model' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0068",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_covered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0069",
+      "category": "theft_specific",
+      "warning": "fill_field 'idv_on_policy' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0070",
+      "category": "theft_specific",
+      "warning": "fill_field 'active_investigation_at_settlement' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0071",
+      "category": "theft_specific",
+      "warning": "fill_field 'indemnity_bond_signed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0072",
+      "category": "theft_specific",
+      "warning": "fill_field 'full_idv_paid' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0073",
+      "category": "theft_specific",
+      "warning": "fill_field 'subrogation_signed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0074",
+      "category": "theft_specific",
+      "warning": "fill_field 'fraud_alert_on_reg' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0074",
+      "category": "theft_specific",
+      "warning": "Priority 1 in incident-specific category 'theft_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QTHF0075",
+      "category": "theft_specific",
+      "warning": "fill_field 'theft_claim_service_history_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0076",
+      "category": "theft_specific",
+      "warning": "fill_field 'towing_receipt_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0077",
+      "category": "theft_specific",
+      "warning": "fill_field 'hypothecation_terminated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0077",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'vehicle_under_finance' not found in schema"
+    },
+    {
+      "id": "QTHF0078",
+      "category": "theft_specific",
+      "warning": "fill_field 'replacement_vehicle_hired' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0079",
+      "category": "theft_specific",
+      "warning": "fill_field 'geographical_limit_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0080",
+      "category": "theft_specific",
+      "warning": "fill_field 'vehicle_returned_claim_negated' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0081",
+      "category": "theft_specific",
+      "warning": "fill_field 'police_escort_recovery' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0082",
+      "category": "theft_specific",
+      "warning": "fill_field 'court_order_for_recovery' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0083",
+      "category": "theft_specific",
+      "warning": "fill_field 'ncrb_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0084",
+      "category": "theft_specific",
+      "warning": "fill_field 'accessories_stolen_separately' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0085",
+      "category": "theft_specific",
+      "warning": "fill_field 'accessories_covered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0085",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'accessories_stolen_separately' not found in schema"
+    },
+    {
+      "id": "QTHF0086",
+      "category": "theft_specific",
+      "warning": "fill_field 'forensic_evidence_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0087",
+      "category": "theft_specific",
+      "warning": "fill_field 'stolen_database_check' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0088",
+      "category": "theft_specific",
+      "warning": "fill_field 'carjacking' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0089",
+      "category": "theft_specific",
+      "warning": "fill_field 'carjacking_harm' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0089",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'carjacking' not found in schema"
+    },
+    {
+      "id": "QTHF0090",
+      "category": "theft_specific",
+      "warning": "fill_field 'high_crime_area_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0091",
+      "category": "theft_specific",
+      "warning": "fill_field 'carpooling_access_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0092",
+      "category": "theft_specific",
+      "warning": "fill_field 'relay_attack_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0093",
+      "category": "theft_specific",
+      "warning": "fill_field 'chop_shop_recovery' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0094",
+      "category": "theft_specific",
+      "warning": "fill_field 'engine_chassis_tampered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0095",
+      "category": "theft_specific",
+      "warning": "fill_field 'vehicle_exported_post_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0096",
+      "category": "theft_specific",
+      "warning": "fill_field 'duplicate_rc_by_thieves' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0097",
+      "category": "theft_specific",
+      "warning": "fill_field 'stolen_from_workshop' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0098",
+      "category": "theft_specific",
+      "warning": "fill_field 'ransom_proof_photos' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0098",
+      "category": "theft_specific",
+      "warning": "required_fields_present value 'ransom_demand' not found in schema"
+    },
+    {
+      "id": "QTHF0099",
+      "category": "theft_specific",
+      "warning": "fill_field 'fastag_post_theft_activity' not found in schema (may be derived)"
+    },
+    {
+      "id": "QTHF0100",
+      "category": "theft_specific",
+      "warning": "fill_field 'plate_changed_post_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0001",
+      "category": "fire_specific",
+      "warning": "Priority 1 in incident-specific category 'fire_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFIR0002",
+      "category": "fire_specific",
+      "warning": "Priority 1 in incident-specific category 'fire_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFIR0003",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_extinguished_brigade' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0004",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_station_case_number' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0007",
+      "category": "fire_specific",
+      "warning": "fill_field 'occupants_trapped_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0008",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_injuries' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0009",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_while_driving' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0010",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_warning_signs' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0013",
+      "category": "fire_specific",
+      "warning": "fill_field 'post_service_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0015",
+      "category": "fire_specific",
+      "warning": "fill_field 'cng_kit_certified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0015",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'cng_lpg_fire_cause' not found in schema"
+    },
+    {
+      "id": "QFIR0017",
+      "category": "fire_specific",
+      "warning": "fill_field 'ev_battery_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0018",
+      "category": "fire_specific",
+      "warning": "fill_field 'ev_fire_circumstances' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0018",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'ev_battery_fire' not found in schema"
+    },
+    {
+      "id": "QFIR0019",
+      "category": "fire_specific",
+      "warning": "fill_field 'manufacturer_recall_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0021",
+      "category": "fire_specific",
+      "warning": "fill_field 'arson_suspected' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0022",
+      "category": "fire_specific",
+      "warning": "Trigger key 'arson_suspected' not in formal schema (runtime field)"
+    },
+    {
+      "id": "QFIR0022",
+      "category": "fire_specific",
+      "warning": "fill_field 'targeted_arson' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0023",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_cause_in_report' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0024",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_investigation_report' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0025",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_in_garage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0026",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_spread_adjacent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0027",
+      "category": "fire_specific",
+      "warning": "fill_field 'tp_claim_from_fire_spread' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0027",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'fire_spread_adjacent' not found in schema"
+    },
+    {
+      "id": "QFIR0028",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_extinguisher_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0029",
+      "category": "fire_specific",
+      "warning": "fill_field 'extinguisher_used' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0029",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'vehicle_extinguisher_available' not found in schema"
+    },
+    {
+      "id": "QFIR0030",
+      "category": "fire_specific",
+      "warning": "fill_field 'fuel_tank_explosion' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0032",
+      "category": "fire_specific",
+      "warning": "fill_field 'accident_caused_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0033",
+      "category": "fire_specific",
+      "warning": "fill_field 'flammable_materials_inside' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0034",
+      "category": "fire_specific",
+      "warning": "fill_field 'chemicals_transported' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0036",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_fir_section' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0037",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_quarantined_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0040",
+      "category": "fire_specific",
+      "warning": "fill_field 'documents_destroyed_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0041",
+      "category": "fire_specific",
+      "warning": "fill_field 'agent_at_fire_scene' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0042",
+      "category": "fire_specific",
+      "warning": "fill_field 'forensic_expert_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0043",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_accelerant_suspected' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0044",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_modifications' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0045",
+      "category": "fire_specific",
+      "warning": "fill_field 'modifications_declared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0045",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'aftermarket_electrical_mods' not found in schema"
+    },
+    {
+      "id": "QFIR0046",
+      "category": "fire_specific",
+      "warning": "fill_field 'political_unrest_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0047",
+      "category": "fire_specific",
+      "warning": "fill_field 'diy_repair_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0048",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_public_transport' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0049",
+      "category": "fire_specific",
+      "warning": "fill_field 'passenger_evacuation_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0049",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'passengers_present' not found in schema"
+    },
+    {
+      "id": "QFIR0050",
+      "category": "fire_specific",
+      "warning": "fill_field 'industrial_zone_fire_risk' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0051",
+      "category": "fire_specific",
+      "warning": "fill_field 'wiring_exposed_pre_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0052",
+      "category": "fire_specific",
+      "warning": "fill_field 'fuel_line_damaged_prior' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0053",
+      "category": "fire_specific",
+      "warning": "fill_field 'service_report_fire_risk' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0056",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_noc_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0057",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_scene_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0058",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_brigade_interviews' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0059",
+      "category": "fire_specific",
+      "warning": "fill_field 'fuel_level_at_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0060",
+      "category": "fire_specific",
+      "warning": "fill_field 'fuel_tank_seal_replaced' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0061",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_containment' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0062",
+      "category": "fire_specific",
+      "warning": "fill_field 'major_fire_declared' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0063",
+      "category": "fire_specific",
+      "warning": "fill_field 'armoured_vehicle_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0064",
+      "category": "fire_specific",
+      "warning": "fill_field 'personal_property_inside' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0065",
+      "category": "fire_specific",
+      "warning": "fill_field 'contents_survey_separate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0065",
+      "category": "fire_specific",
+      "warning": "required_fields_present value 'personal_property_inside' not found in schema"
+    },
+    {
+      "id": "QFIR0066",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_at_petrol_station' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0067",
+      "category": "fire_specific",
+      "warning": "fill_field 'manufacturer_recall_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0072",
+      "category": "fire_specific",
+      "warning": "fill_field 'smoking_in_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0073",
+      "category": "fire_specific",
+      "warning": "fill_field 'vulnerable_persons_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0074",
+      "category": "fire_specific",
+      "warning": "fill_field 'chemicals_transported' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0075",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_marks_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0076",
+      "category": "fire_specific",
+      "warning": "fill_field 'street_race_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0077",
+      "category": "fire_specific",
+      "warning": "fill_field 'building_fire_vehicle_damaged' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0079",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_modifications' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0080",
+      "category": "fire_specific",
+      "warning": "fill_field 'municipal_fire_report' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0081",
+      "category": "fire_specific",
+      "warning": "fill_field 'ambulance_equipment_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0083",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_current_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0084",
+      "category": "fire_specific",
+      "warning": "fill_field 'forensic_analysis_required' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0085",
+      "category": "fire_specific",
+      "warning": "fill_field 'gps_data_extracted_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0086",
+      "category": "fire_specific",
+      "warning": "fill_field 'forest_area_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0087",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_spread_adjacent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0088",
+      "category": "fire_specific",
+      "warning": "fill_field 'explosive_in_vehicle_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0088",
+      "category": "fire_specific",
+      "warning": "Priority 1 in incident-specific category 'fire_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFIR0089",
+      "category": "fire_specific",
+      "warning": "fill_field 'sunroof_fire_spread' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0090",
+      "category": "fire_specific",
+      "warning": "fill_field 'agent_fire_investigation' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0091",
+      "category": "fire_specific",
+      "warning": "fill_field 'documents_destroyed_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0092",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_warning_signs' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0093",
+      "category": "fire_specific",
+      "warning": "fill_field 'post_service_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0094",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_risk_at_renewal' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0096",
+      "category": "fire_specific",
+      "warning": "fill_field 'external_fire_source' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0097",
+      "category": "fire_specific",
+      "warning": "fill_field 'vehicle_extinguisher_available' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0098",
+      "category": "fire_specific",
+      "warning": "fill_field 'convoy_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFIR0099",
+      "category": "fire_specific",
+      "warning": "fill_field 'fire_scene_cordoned' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0001",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_moving_or_parked' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0001",
+      "category": "flood_specific",
+      "warning": "Priority 1 in incident-specific category 'flood_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFLD0002",
+      "category": "flood_specific",
+      "warning": "Priority 1 in incident-specific category 'flood_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFLD0003",
+      "category": "flood_specific",
+      "warning": "Priority 1 in incident-specific category 'flood_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFLD0004",
+      "category": "flood_specific",
+      "warning": "fill_field 'interior_water_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0006",
+      "category": "flood_specific",
+      "warning": "fill_field 'hydrostatic_lock_suspected' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0007",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_moved_pre_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0008",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_abandoned_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0010",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0011",
+      "category": "flood_specific",
+      "warning": "fill_field 'known_flood_prone_area' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0012",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_discharge_zone' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0013",
+      "category": "flood_specific",
+      "warning": "fill_field 'govt_parking_advisory' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0016",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_level_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0017",
+      "category": "flood_specific",
+      "warning": "fill_field 'engine_protection_addon' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0018",
+      "category": "flood_specific",
+      "warning": "fill_field 'gearbox_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0019",
+      "category": "flood_specific",
+      "warning": "fill_field 'electrical_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0022",
+      "category": "flood_specific",
+      "warning": "fill_field 'ev_battery_submerged' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0023",
+      "category": "flood_specific",
+      "warning": "fill_field 'door_seal_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0025",
+      "category": "flood_specific",
+      "warning": "fill_field 'interior_water_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0026",
+      "category": "flood_specific",
+      "warning": "fill_field 'window_regulator_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0027",
+      "category": "flood_specific",
+      "warning": "fill_field 'electronics_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0028",
+      "category": "flood_specific",
+      "warning": "fill_field 'cleaned_before_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0029",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_records_verified' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0030",
+      "category": "flood_specific",
+      "warning": "fill_field 'municipal_flood_certificate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0031",
+      "category": "flood_specific",
+      "warning": "fill_field 'riverbed_flood_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0032",
+      "category": "flood_specific",
+      "warning": "fill_field 'dam_release_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0033",
+      "category": "flood_specific",
+      "warning": "fill_field 'govt_declared_catastrophe' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0034",
+      "category": "flood_specific",
+      "warning": "fill_field 'on_site_assessment_wet' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0035",
+      "category": "flood_specific",
+      "warning": "fill_field 'silt_inside_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0036",
+      "category": "flood_specific",
+      "warning": "fill_field 'seawater_vs_freshwater' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0038",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_visibility_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0039",
+      "category": "flood_specific",
+      "warning": "fill_field 'disaster_team_involved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0040",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_moved_engine_off_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0041",
+      "category": "flood_specific",
+      "warning": "fill_field 'ac_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0042",
+      "category": "flood_specific",
+      "warning": "fill_field 'electrical_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0043",
+      "category": "flood_specific",
+      "warning": "fill_field 'engine_protection_addon' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0044",
+      "category": "flood_specific",
+      "warning": "fill_field 'exhaust_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0045",
+      "category": "flood_specific",
+      "warning": "fill_field 'fuel_tank_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0046",
+      "category": "flood_specific",
+      "warning": "fill_field 'brake_system_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0047",
+      "category": "flood_specific",
+      "warning": "fill_field 'repaired_before_inspection' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0048",
+      "category": "flood_specific",
+      "warning": "fill_field 'moisture_detection_tool' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0049",
+      "category": "flood_specific",
+      "warning": "fill_field 'parking_structure_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0050",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_marks_in_door_panels' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0051",
+      "category": "flood_specific",
+      "warning": "Priority 1 in incident-specific category 'flood_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFLD0052",
+      "category": "flood_specific",
+      "warning": "fill_field 'satellite_flood_evidence' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0054",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0055",
+      "category": "flood_specific",
+      "warning": "fill_field 'annual_monsoon_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0056",
+      "category": "flood_specific",
+      "warning": "fill_field 'garaged_but_flooded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0057",
+      "category": "flood_specific",
+      "warning": "fill_field 'hydrological_report' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0058",
+      "category": "flood_specific",
+      "warning": "fill_field 'relocated_to_flood_zone' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0059",
+      "category": "flood_specific",
+      "warning": "fill_field 'post_flood_parts_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0060",
+      "category": "flood_specific",
+      "warning": "fill_field 'submersion_duration' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0061",
+      "category": "flood_specific",
+      "warning": "fill_field 'govt_relief_applicable' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0062",
+      "category": "flood_specific",
+      "warning": "fill_field 'telematics_flood_data' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0063",
+      "category": "flood_specific",
+      "warning": "fill_field 'power_steering_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0064",
+      "category": "flood_specific",
+      "warning": "fill_field 'gearbox_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0065",
+      "category": "flood_specific",
+      "warning": "fill_field 'wheel_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0067",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0068",
+      "category": "flood_specific",
+      "warning": "fill_field 'chassis_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0069",
+      "category": "flood_specific",
+      "warning": "fill_field 'road_tax_sticker_lost' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0070",
+      "category": "flood_specific",
+      "warning": "fill_field 'trunk_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0071",
+      "category": "flood_specific",
+      "warning": "fill_field 'personal_property_inside' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0072",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_stalled_before' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0073",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_damage_certificate' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0074",
+      "category": "flood_specific",
+      "warning": "fill_field 'recovery_before_after_recession' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0075",
+      "category": "flood_specific",
+      "warning": "fill_field 'mould_growth_post_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0077",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_washed_downstream' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0078",
+      "category": "flood_specific",
+      "warning": "fill_field 'vehicle_found_away_from_location' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0079",
+      "category": "flood_specific",
+      "warning": "fill_field 'cyclone_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0080",
+      "category": "flood_specific",
+      "warning": "fill_field 'gps_data_extracted_fire' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0081",
+      "category": "flood_specific",
+      "warning": "fill_field 'engine_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0082",
+      "category": "flood_specific",
+      "warning": "fill_field 'wiper_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0083",
+      "category": "flood_specific",
+      "warning": "fill_field 'fleet_flood_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0084",
+      "category": "flood_specific",
+      "warning": "fill_field 'drone_footage_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0085",
+      "category": "flood_specific",
+      "warning": "fill_field 'brake_system_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0086",
+      "category": "flood_specific",
+      "warning": "fill_field 'roof_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0087",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0088",
+      "category": "flood_specific",
+      "warning": "fill_field 'timely_notification' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0088",
+      "category": "flood_specific",
+      "warning": "Priority 1 in incident-specific category 'flood_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QFLD0089",
+      "category": "flood_specific",
+      "warning": "fill_field 'owner_negligence_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0090",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_location_mismatch' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0091",
+      "category": "flood_specific",
+      "warning": "fill_field 'tools_flood_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0092",
+      "category": "flood_specific",
+      "warning": "fill_field 'sunroof_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0093",
+      "category": "flood_specific",
+      "warning": "fill_field 'parking_structure_flood' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0094",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_level_consistent' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0096",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0097",
+      "category": "flood_specific",
+      "warning": "fill_field 'disaster_team_involved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0098",
+      "category": "flood_specific",
+      "warning": "fill_field 'flood_cause' not found in schema (may be derived)"
+    },
+    {
+      "id": "QFLD0099",
+      "category": "flood_specific",
+      "warning": "fill_field 'natural_disaster_covered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0001",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0002",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0003",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0004",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'public_or_private_road' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0005",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_overnight' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0007",
+      "category": "vandalism_specific",
+      "warning": "required_fields_present value 'suspects_seen' not found in schema"
+    },
+    {
+      "id": "QVAN0010",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0012",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'cctv_preserved' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0018",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'graffiti_gang_symbol' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0018",
+      "category": "vandalism_specific",
+      "warning": "required_fields_present value 'graffiti_vandalism' not found in schema"
+    },
+    {
+      "id": "QVAN0020",
+      "category": "vandalism_specific",
+      "warning": "required_fields_present value 'keyed_vandalism' not found in schema"
+    },
+    {
+      "id": "QVAN0022",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'number_plate_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0023",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'personal_property_inside' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0027",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'fire_post_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0028",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'multiple_vehicles_vandalised' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0029",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_prone_area' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0030",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'riot_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0031",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'public_figure_vehicle_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0032",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandal_tool_marks' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0033",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'threat_note_on_vehicle' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0035",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandal_face_seen' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0036",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'parking_guarded' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0037",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'guard_statement_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0037",
+      "category": "vandalism_specific",
+      "warning": "required_fields_present value 'gated_society_vandalism' not found in schema"
+    },
+    {
+      "id": "QVAN0039",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'rental_company_informed' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0039",
+      "category": "vandalism_specific",
+      "warning": "required_fields_present value 'rented_vehicle_vandalism' not found in schema"
+    },
+    {
+      "id": "QVAN0040",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_repair_type' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0041",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'high_end_brand_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0043",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'verbal_threat_pre_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0044",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'time_of_day' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0046",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'long_term_parking_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0047",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'police_beat_area' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0048",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'cognisable_offence_registered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0049",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'forensic_evidence_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0050",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'paint_transfer_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0053",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'wiper_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0055",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'pi_hired_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0056",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_crime_pattern' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0057",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'police_investigation_status' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0058",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'civil_suit_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0059",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_on_social_media' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0060",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'digital_evidence_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0062",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vinyl_wrap_vandalised' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0063",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'number_plate_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0066",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'communal_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0067",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'political_vehicle_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0068",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'vandalism_video_by_perp' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0069",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'company_logo_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0072",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'fuel_cap_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0073",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'fuel_tank_damage' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0075",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'bomb_threat_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0077",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'accessories_stolen_separately' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0078",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'scratch_concentration_area' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0079",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'celebration_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0080",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'copycat_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0081",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'perpetrator_apology' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0082",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'security_upgrade_post_prior_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0083",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'keyless_entry_hack' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0084",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'engine_chassis_tampered' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0084",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0088",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'parking_type_at_theft' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0091",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'timely_notification' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0091",
+      "category": "vandalism_specific",
+      "warning": "Priority 1 in incident-specific category 'vandalism_specific' with incident_type trigger — confirm this is a genuine safety/legal blocker"
+    },
+    {
+      "id": "QVAN0092",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'damage_incident_consistency' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0093",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'new_vehicle_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0094",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'accessories_stolen_separately' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0098",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'news_report_vandalism' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0099",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'accessories_stolen_separately' not found in schema (may be derived)"
+    },
+    {
+      "id": "QVAN0100",
+      "category": "vandalism_specific",
+      "warning": "fill_field 'alarm_immobiliser_active' not found in schema (may be derived)"
+    }
+  ],
+  "stage3_duplicates": [],
+  "stage4_coverage": {
+    "required_fields_total": 11,
+    "required_fields_covered": 11,
+    "uncovered_required_fields": [],
+    "category_counts": {
+      "collision_dynamics": 100,
+      "damage_assessment": 100,
+      "fire_specific": 100,
+      "flood_specific": 100,
+      "fraud_consistency": 100,
+      "incident_core": 100,
+      "legal_reporting": 100,
+      "policy_eligibility": 100,
+      "repair_settlement": 100,
+      "theft_specific": 100,
+      "third_party_details": 100,
+      "vandalism_specific": 100
+    },
+    "categories_under_minimum": {},
+    "missing_categories": [],
+    "unique_fill_fields_used": 920,
+    "field_coverage_map": {
+      "damage_assessment_drivable": [
+        "QINC0092",
+        "QINC0092",
+        "QDAM0003"
+      ],
+      "third_party_third_party_involved": [
+        "QTHI0001",
+        "QTHI0001"
+      ],
+      "vehicle_model": [
+        "QINC0008",
+        "QINC0008"
+      ],
+      "incident_core_loss_datetime": [
+        "QINC0002",
+        "QINC0002",
+        "QVAN0002"
+      ],
+      "policy_policy_active": [
+        "QPOL0001",
+        "QPOL0001",
+        "QFLD0051"
+      ],
+      "incident_core_category": [
+        "QINC0001",
+        "QINC0001"
+      ],
+      "policy_policy_number": [
+        "QPOL0002",
+        "QPOL0002"
+      ],
+      "vehicle_registration_number": [
+        "QINC0006",
+        "QINC0006"
+      ],
+      "incident_core_loss_location": [
+        "QINC0003",
+        "QINC0003",
+        "QINC0004"
+      ],
+      "vehicle_year": [
+        "QINC0009",
+        "QINC0009"
+      ],
+      "vehicle_make": [
+        "QINC0007",
+        "QINC0007"
+      ]
+    },
+    "coverage_pass": true
+  },
+  "priority_distribution": {
+    "1": 86,
+    "2": 548,
+    "3": 471,
+    "4": 84,
+    "5": 11
+  },
+  "category_distribution": {
+    "incident_core": 100,
+    "collision_dynamics": 100,
+    "damage_assessment": 100,
+    "third_party_details": 100,
+    "legal_reporting": 100,
+    "policy_eligibility": 100,
+    "fraud_consistency": 100,
+    "repair_settlement": 100,
+    "theft_specific": 100,
+    "fire_specific": 100,
+    "flood_specific": 100,
+    "vandalism_specific": 100
+  },
+  "trigger_key_usage": {
+    "incident_type": 569,
+    "required_fields_present": 77,
+    "third_party_involved": 100,
+    "third_party_insurer_known": 6,
+    "hit_and_run": 7,
+    "third_party_injuries_reported": 1,
+    "police_report_filed": 34,
+    "witness_available": 6,
+    "cctv_available": 3,
+    "dashcam_footage_available": 1,
+    "legal_notice_received": 3,
+    "challan_issued": 3,
+    "driver_arrested": 2,
+    "court_date_set": 2,
+    "breathalyser_administered": 2,
+    "medical_attention_required": 1,
+    "mact_petition_filed": 1,
+    "licence_seized": 1,
+    "vehicle_seized": 2,
+    "owner_is_driver": 1,
+    "total_loss_assessed": 4,
+    "settlement_offer_agreed": 1,
+    "settlement_preference": 1,
+    "claim_repudiated": 2,
+    "gps_tracker_installed": 3,
+    "vehicle_tracked": 10,
+    "fire_brigade_called": 3,
+    "arson_suspected": 1,
+    "fire_report_available": 1
+  }
+}

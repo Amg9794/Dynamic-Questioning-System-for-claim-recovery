@@ -1,0 +1,251 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Vehicle insurance claim state schema. All unknown/unasked fields use null. All inapplicable fields use '__NA__'.",
+    "null_convention": "null = not yet asked or unknown",
+    "na_convention": "__NA__ = field is not applicable given incident type or prior answers",
+    "false_convention": "false = explicitly confirmed as negative (e.g. police_report_filed: false means user said no report was filed)"
+  },
+
+  "fields": {
+
+    "incident_core": {
+      "category": {
+        "type": "string",
+        "required": true,
+        "enum": ["collision", "collision_wall", "theft", "fire", "flood", "vandalism", "animal_strike", "glass_damage", "mechanical_breakdown", "unknown"],
+        "description": "Primary incident type. Drives which question branches are activated."
+      },
+      "loss_datetime": {
+        "type": "string",
+        "required": true,
+        "format": "ISO 8601 or natural language normalized to YYYY-MM-DD HH:MM",
+        "default": null
+      },
+      "loss_location": {
+        "type": "object",
+        "required": true,
+        "fields": {
+          "city": {"type": "string", "default": null},
+          "state": {"type": "string", "default": null},
+          "road_type": {
+            "type": "string",
+            "enum": ["highway", "urban", "rural", "parking_lot", "private_property", "unknown"],
+            "default": null
+          },
+          "landmark": {"type": "string", "default": null}
+        }
+      },
+      "reported_to_insurer_datetime": {
+        "type": "string",
+        "description": "When the claim was first reported to insurer",
+        "default": null
+      }
+    },
+
+    "vehicle": {
+      "make": {"type": "string", "required": true, "default": null},
+      "model": {"type": "string", "required": true, "default": null},
+      "year": {"type": "integer", "required": true, "default": null},
+      "registration_number": {"type": "string", "required": true, "default": null},
+      "color": {"type": "string", "default": null},
+      "fuel_type": {
+        "type": "string",
+        "enum": ["petrol", "diesel", "cng", "electric", "hybrid", "unknown"],
+        "default": null
+      },
+      "odometer_reading": {"type": "integer", "default": null},
+      "vehicle_usage_type": {
+        "type": "string",
+        "enum": ["personal", "commercial", "rental", "rideshare", "unknown"],
+        "default": null
+      }
+    },
+
+    "driver": {
+      "owner_is_driver": {"type": "boolean", "default": null},
+      "driver_name": {"type": "string", "default": null},
+      "driver_license_number": {"type": "string", "default": null},
+      "driver_license_valid": {"type": "boolean", "default": null},
+      "driver_relationship_to_owner": {
+        "type": "string",
+        "enum": ["self", "spouse", "child", "employee", "friend", "unauthorized", "unknown"],
+        "default": null
+      },
+      "driver_under_influence": {"type": "boolean", "default": null},
+      "breathalyzer_administered": {"type": "boolean", "default": null}
+    },
+
+    "damage_assessment": {
+      "drivable": {"type": "boolean", "required": true, "default": null},
+      "towing_required": {"type": "boolean", "default": null},
+      "damage_areas": {
+        "type": "array",
+        "items": {
+          "enum": ["front_bumper", "rear_bumper", "left_door", "right_door",
+                   "hood", "trunk", "roof", "windshield", "left_headlamp",
+                   "right_headlamp", "underbody", "engine", "tyres", "full_body"]
+        },
+        "default": null
+      },
+      "damage_severity": {
+        "type": "string",
+        "enum": ["minor", "moderate", "severe", "total_loss"],
+        "default": null
+      },
+      "airbags_deployed": {"type": "boolean", "default": null},
+      "glass_damage": {"type": "boolean", "default": null},
+      "underbody_damage": {"type": "boolean", "default": null},
+      "estimated_repair_cost": {"type": "number", "default": null},
+      "pre_existing_damage": {"type": "boolean", "default": null}
+    },
+
+    "third_party": {
+      "third_party_involved": {"type": "boolean", "required": true, "default": null},
+      "third_party_vehicle_id": {"type": "string", "default": null},
+      "third_party_vehicle_make_model": {"type": "string", "default": null},
+      "third_party_driver_name": {"type": "string", "default": null},
+      "third_party_contact": {"type": "string", "default": null},
+      "third_party_insurer_known": {"type": "boolean", "default": null},
+      "third_party_insurer_name": {"type": "string", "default": null},
+      "third_party_injuries_reported": {"type": "boolean", "default": null},
+      "pedestrian_involved": {"type": "boolean", "default": null},
+      "hit_and_run": {"type": "boolean", "default": null}
+    },
+
+    "legal_and_reporting": {
+      "police_report_filed": {"type": "boolean", "default": null},
+      "fir_number": {"type": "string", "default": null},
+      "police_station_name": {"type": "string", "default": null},
+      "witness_available": {"type": "boolean", "default": null},
+      "witness_contact": {"type": "string", "default": null},
+      "cctv_available": {"type": "boolean", "default": null},
+      "dashcam_footage_available": {"type": "boolean", "default": null},
+      "legal_notice_received": {"type": "boolean", "default": null}
+    },
+
+    "evidence": {
+      "photos_available": {"type": "boolean", "default": null},
+      "video_available": {"type": "boolean", "default": null},
+      "repair_estimate_available": {"type": "boolean", "default": null},
+      "documents_submitted": {
+        "type": "array",
+        "items": {
+          "enum": ["driving_license", "rc_book", "insurance_policy",
+                   "fir_copy", "repair_estimate", "photos", "video",
+                   "medical_report", "towing_receipt"]
+        },
+        "default": null
+      }
+    },
+
+    "policy": {
+      "policy_number": {"type": "string", "required": true, "default": null},
+      "policy_active": {"type": "boolean", "required": true, "default": null},
+      "coverage_type": {
+        "type": "string",
+        "enum": ["comprehensive", "third_party_only", "own_damage_only", "unknown"],
+        "default": null
+      },
+      "addons": {
+        "type": "array",
+        "items": {
+          "enum": ["zero_dep", "roadside_assistance", "engine_protection",
+                   "consumables", "return_to_invoice", "ncb_protection", "key_replacement"]
+        },
+        "default": null
+      },
+      "ncb_percentage": {"type": "integer", "default": null},
+      "previous_claims_count": {"type": "integer", "default": null},
+      "policy_expiry_date": {"type": "string", "default": null}
+    },
+
+    "repair_and_settlement": {
+      "workshop_preference": {
+        "type": "string",
+        "enum": ["cashless_network", "own_workshop", "no_preference"],
+        "default": null
+      },
+      "settlement_preference": {
+        "type": "string",
+        "enum": ["cashless", "reimbursement"],
+        "default": null
+      },
+      "inspection_scheduled": {"type": "boolean", "default": null},
+      "surveyor_assigned": {"type": "boolean", "default": null}
+    },
+
+    "incident_specific": {
+      "theft": {
+        "applicable_when": ["theft"],
+        "keys_available": {"type": "boolean", "default": null},
+        "forced_entry_signs": {"type": "boolean", "default": null},
+        "vehicle_tracked": {"type": "boolean", "default": null},
+        "gps_tracker_installed": {"type": "boolean", "default": null},
+        "last_seen_location": {"type": "string", "default": null},
+        "parking_type_at_time_of_theft": {
+          "type": "string",
+          "enum": ["home_garage", "public_parking", "office_parking", "roadside", "unknown"],
+          "default": null
+        }
+      },
+      "fire": {
+        "applicable_when": ["fire"],
+        "fire_source": {
+          "type": "string",
+          "enum": ["engine", "electrical", "fuel_leak", "external", "unknown"],
+          "default": null
+        },
+        "fire_brigade_called": {"type": "boolean", "default": null},
+        "fire_report_available": {"type": "boolean", "default": null},
+        "vehicle_fully_burnt": {"type": "boolean", "default": null}
+      },
+      "flood": {
+        "applicable_when": ["flood"],
+        "water_level_reached": {
+          "type": "string",
+          "enum": ["below_door", "door_level", "above_door", "engine_submerged", "fully_submerged"],
+          "default": null
+        },
+        "engine_started_after_flood": {"type": "boolean", "default": null},
+        "flood_warning_issued": {"type": "boolean", "default": null}
+      },
+      "vandalism": {
+        "applicable_when": ["vandalism"],
+        "vandalism_type": {
+          "type": "string",
+          "enum": ["keying", "tyre_slashing", "window_smash", "graffiti", "multiple"],
+          "default": null
+        },
+        "motive_known": {"type": "boolean", "default": null},
+        "suspects_identified": {"type": "boolean", "default": null}
+      }
+    },
+
+    "fraud_flags": {
+      "_description": "Internal fields — not asked directly, inferred from state inconsistencies",
+      "claim_timeline_inconsistency": {"type": "boolean", "default": false},
+      "repeated_claim_on_same_vehicle": {"type": "boolean", "default": false},
+      "damage_inconsistent_with_incident": {"type": "boolean", "default": false},
+      "driver_details_inconsistent": {"type": "boolean", "default": false}
+    },
+
+    "session_control": {
+      "already_extracted_categories": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Question fields already answered — used to suppress duplicate questions",
+        "default": []
+      },
+      "answered_question_ids": {
+        "type": "array",
+        "items": {"type": "string"},
+        "default": []
+      },
+      "session_id": {"type": "string", "default": null},
+      "turn_count": {"type": "integer", "default": 0},
+      "terminated": {"type": "boolean", "default": false},
+      "termination_reason": {"type": "string", "default": null}
+    }
+  }
+}
