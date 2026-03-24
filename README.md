@@ -161,7 +161,7 @@ The schema was designed not as a database schema, but as the **retriever's runti
 
 The vocabulary was kept in a separate file so that Task 1 (question generation), Task 2 (validation), Task 3 (retrieval), and Task 4 (NLU extraction) all share the same enum values. One change propagates everywhere.
 
-Explicit integer priority rules were chosen over ML ranking because every question selection in an insurance system must be **auditable**. A rule-based system can always answer "why was this question asked" — a learned ranker cannot.
+Explicit integer priority rules were chosen. A rule-based system can always answer "why was this question asked" — a learned ranker cannot.
 
 ---
 
