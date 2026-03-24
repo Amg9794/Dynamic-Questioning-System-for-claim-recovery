@@ -158,7 +158,7 @@ This distinction matters because conflating `null` and `"__NA__"` causes the ret
 
 **Why this approach:**
 
-The schema was designed not as a database schema, but as the **retriever's runtime input object**. Every turn, the retriever receives one JSON object and must evaluate trigger conditions in O(1). This required flat typed fields, explicit null conventions, and session control fields all living inside the same object — no synchronisation, no multi-object lookups.
+The schema was designed not as a database schema, but as the **retriever's runtime input object**. Every turn, the retriever receives one JSON object and must evaluate trigger conditions in effiecnetly. This required flat typed fields, explicit null conventions, and session control fields all living inside the same object — no synchronisation, no multi-object lookups.
 
 The vocabulary was kept in a separate file so that Task 1 (question generation), Task 2 (validation), Task 3 (retrieval), and Task 4 (NLU extraction) all share the same enum values. One change propagates everywhere.
 
