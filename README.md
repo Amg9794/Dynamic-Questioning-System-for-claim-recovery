@@ -136,13 +136,13 @@ python test_cases.py
 
 ### Task 0 — Foundation
 
-**What it was:** Before any other task could begin,three files that define the complete contract for the entire system need to be created 
+**What it was:** Before any other task could begin,three files that define the complete contract for the entire system need to be created. If we directly jump into writing questions or building the retrieve we may end up with a mess as questions use different field names, retriever doesn't know what to check, NLU doesn't know what to extract. Ttho avoid these inconsistencies we have to create following :
 
 **Three deliverables:**
 
 | File | Purpose |
 |---|---|
-| `claim_state_schema.json` | Defines every claim field — type, required flag, default value |
+| `claim_state_schema.json` | Defines every claim field — type, required flag, default value, state of claim at any point in time |
 | `domain_vocabulary.json` | All allowed enum values in one place |
 | `priority_policy.md` | Rules for question ordering and when to end the session |
 
