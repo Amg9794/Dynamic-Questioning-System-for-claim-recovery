@@ -156,7 +156,6 @@ python test_cases.py
 
 This distinction matters because conflating `null` and `"__NA__"` causes the retriever to incorrectly suppress or trigger questions. A flood-specific question on a theft claim should be `"__NA__"` — not `null` — so the retriever knows it is permanently inapplicable, not simply unanswered.
 
-**Why this approach:**
 
 The schema was designed not as a database schema, but as the **retriever's runtime input object**. Every turn, the retriever receives one JSON object and must evaluate trigger conditions in effiecnetly. This required flat typed fields, explicit null conventions, and session control fields all living inside the same object — no synchronisation, no multi-object lookups.
 
