@@ -2,7 +2,7 @@
 
 **Meeami Technologies — ML Engineering Assessment**
 
-A state-driven, streaming question engine for vehicle insurance claim intake. The system conducts a structured interview with a claimant, selecting the next best question from a 1,200-question bank based on the evolving claim state — with no ML in the retrieval path.
+A state-driven, question engine for vehicle insurance claim intake. The system conducts a structured interview with a claimant, selecting the next best question from a 1,200-question bank based on the evolving claim state — with no ML in the retrieval path.
 
 ---
 
